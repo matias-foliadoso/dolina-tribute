@@ -100,6 +100,7 @@ body {
     .title {
         color: var(--black-color);
         font: bold 100px var(--times-new-roman-font);
+        text-align: center;
     }
 
     .description {
@@ -108,10 +109,9 @@ body {
     }
 }
 
-
 .white-card {
     padding: 80px 40px;
-    margin: 30px;
+    margin: 0;
 
     display: block;
 
@@ -136,7 +136,7 @@ body {
     .body {
         margin: auto;
 
-        width: min(80%, 1000px);
+        width: min(100%, 1000px);
 
         color: var(--font-grey-secondary-color);
 
@@ -147,9 +147,9 @@ body {
 }
 
 .background {
-    background: url("https://i0.wp.com/sanjoseahora.com.uy/wp-content/uploads/2019/01/dolina-1.jpg?resize=750%2C536&ssl=1") center/cover fixed;
+    background: url("https://i0.wp.com/sanjoseahora.com.uy/wp-content/uploads/2019/01/dolina-1.jpg?resize=750%2C536&ssl=1") center/cover;
     .window {
-        padding: 120px;
+        padding: 80px 40px;
 
         color: var(--background-secondary-color);
         background-color: rgba(0, 0, 0, 0.5);
@@ -186,7 +186,7 @@ body {
     --col-gap: 20px;
     --row-gap: 2rem;
     --line-w: 2px;
-
+    padding: 80px 0;
     & ul {
         width: min(60rem, 90%);
         margin-inline: auto;
@@ -336,12 +336,24 @@ body {
     filter: invert(100%) sepia(7%) saturate(29%) hue-rotate(233deg) brightness(106%) contrast(110%);
 }
 
-
 @media (min-width: 65rem) {
     .title {
         font-size: 150px;
     }
+    .white-card {
+        margin: 30px;
+        .body {
+            width: min(80%, 1000px);
+        }
+    }
+    .background {
+        background-attachment: fixed;
+        .window {
+            padding: 120px;
+        }
+    }
     .time-line {
+      padding: 80px 40px;
         & ul {
             grid-template-columns: 1fr var(--line-w) 1fr;
         }
